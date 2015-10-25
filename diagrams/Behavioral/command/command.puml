@@ -1,0 +1,31 @@
+@startuml
+
+class Invoker
+class Receiver
+interface CommandInterface
+class ConcreteCommand
+
+ConcreteCommand <|-- CommandInterface
+
+interface CommandInterface{
+    execute()
+}
+
+class ConcreteCommand{
+    data
+    output
+    --
+    execute()
+}
+
+class Invoker{
+    List<CommandInterface>: commandList
+    --
+    addCommand(cmd)
+    run()
+}
+
+class Receiver{
+    write(str)
+}
+@enduml

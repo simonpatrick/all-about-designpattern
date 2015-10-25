@@ -1,0 +1,24 @@
+@startuml
+
+abstract class Handler
+
+ConcreteHandler1<|--Handler
+ConcreteHandler2<|--Handler
+
+class Handler {
+Handler successor
+handler()
+abstract process()
+}
+
+class ConcreteHandler1 {
+data
+process()
+}
+
+class ConcreteHandler2 {
+data
+process()
+}
+
+@enduml
