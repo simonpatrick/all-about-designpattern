@@ -4,7 +4,6 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import java.util.*;
-import java.util.function.Predicate;
 
 /**
  * Created by patrick on 15/10/27.
