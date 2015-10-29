@@ -1,0 +1,2 @@
+Today’s refactoring is based on the c2 wiki entry and can be found here. Los Techies own Chris Missal also did a very informative post on the antipattern that you can find here.
+Simply put, the arrowhead antipattern is when you have nested conditionals so deep that they form an arrowhead of code. I see this very often in different code bases and it makes for high cyclomatic complexity in code.
