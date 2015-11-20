@@ -1,0 +1,12 @@
+require 'ruby_data_structures'
+
+require 'singly_linked_list'
+require 'multi_dimensional_array'
+require 'stack_as_array'
+require 'fifo_stack'
+require 'queue_as_array'
+require 'singly_linked_list'
+require 'singly_linked_list/element'
+require 'double_linked_list'
+require 'double_linked_list/element'
+require 'max_heap'
