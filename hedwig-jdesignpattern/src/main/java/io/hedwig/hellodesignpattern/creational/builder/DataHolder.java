@@ -1,4 +1,4 @@
-package io.hedwig.jdesignpattern.builder;
+package io.hedwig.hellodesignpattern.creational.builder;
 
 /**
  * Created by patrick on 15/9/26.
