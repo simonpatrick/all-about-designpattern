@@ -29,9 +29,10 @@ public class Painter {
                         if(f.isDirectory()){
                             System.out.println(packageSimpleName);
                             System.out.println(f.getName());
+                            System.out.println(basePackageName + "." + packageSimpleName+"."+f.getName());
                             DomainMapperPainter.build()
-                                    .addPackage(basePackageName+"."+packageSimpleName)
-                                    .writeTo(f.getName()+".dot").paint();
+                                    .addPackage(basePackageName + "." + packageSimpleName+"."+f.getName())
+                                    .writeTo(f.getName() + ".dot").paint();
                         }
                     }
                 }

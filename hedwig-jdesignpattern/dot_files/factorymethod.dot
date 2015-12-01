@@ -6,36 +6,5 @@ digraph domain {
     FactoryMethodHelloWorldFactory [ label = "{FactoryMethodHelloWorldFactory | + public HelloWorld createHelloWorld()\l}" ] 
     HelloWorldFactory [ label = "{HelloWorldFactory | + public HelloWorld createHelloWorld()\l}" ] 
   }
-  subgraph cluster_1 {
-    label = "io.hedwig.hellodesignpattern.creational.singleton";
-    HelloWorldSingletonHolder [ label = "{HelloWorldSingletonHolder | }" ] 
-    HelloWorldSingleton [ label = "{HelloWorldSingleton | + public String helloWorld()\l+ public static HelloWorldSingleton instance()\l}" ] 
-  }
-  subgraph cluster_2 {
-    label = "io.hedwig.hellodesignpattern.creational.prototype";
-    HelloWorldPrototype [ label = "{HelloWorldPrototype | + public HelloWorld clone()\l+ public Object clone() throws java.lang.CloneNotSupportedException\l+ public String helloWorld()\l}" ] 
-  }
-  subgraph cluster_3 {
-    label = "io.hedwig.hellodesignpattern.creational.builder";
-    Builder [ label = "{Builder | }" ] 
-    DataHolder [ label = "{DataHolder | }" ] 
-    ComplicatedDataHolder [ label = "{ComplicatedDataHolder | + public String toString()\l+ public static void main(String[])\l}" ] 
-    HelloWorldBuilder [ label = "{HelloWorldBuilder | + public HelloWorld getHelloWorld()\l+ public HelloWorldBuilder interjection(String)\l+ public HelloWorldBuilder object(String)\l+ public static HelloWorldBuilder builder()\l+ static String access$000(HelloWorldBuilder)\l+ static String access$100(HelloWorldBuilder)\l}" ] 
-  }
-  subgraph cluster_4 {
-    label = "io.hedwig.hellodesignpattern.creational.abstractfactory";
-    DesignPatternHelloWorldObject [ label = "{DesignPatternHelloWorldObject | }" ] 
-    DesignPatternSplitHelloWorldFactory [ label = "{DesignPatternSplitHelloWorldFactory | + public HelloWorldInterjection createHelloWorldInterjection()\l+ public HelloWorldObject createHelloWorldObject()\l}" ] 
-    JavaSplitHelloWorldFactory [ label = "{JavaSplitHelloWorldFactory | + public HelloWorldInterjection createHelloWorldInterjection()\l+ public HelloWorldObject createHelloWorldObject()\l}" ] 
-    JavaHelloWorldObject [ label = "{JavaHelloWorldObject | }" ] 
-    AbstractFactory [ label = "{AbstractFactory | + public static SplitHelloWorldFactory select(Type) throws java.lang.IllegalAccessException,java.lang.InstantiationException\l}" ] 
-    SplitHelloWorldFactory [ label = "{SplitHelloWorldFactory | + public abstract HelloWorldInterjection createHelloWorldInterjection()\l+ public abstract HelloWorldObject createHelloWorldObject()\l}" ] 
-  }
-  JavaHelloWorldObject -> JavaSplitHelloWorldFactory [ dir=forward arrowhead=odiamond color=slategray];
-  DesignPatternHelloWorldObject -> DesignPatternSplitHelloWorldFactory [ dir=forward arrowhead=odiamond color=slategray];
-  HelloWorldSingletonHolder -> HelloWorldSingleton [ dir=back arrowtail=odiamond color=slategray];
-  HelloWorldPrototype -> HelloWorldPrototype [ dir=back arrowtail=odiamond color=slategray];
   FactoryMethodHelloWorldFactory -> HelloWorldFactory [arrowhead=empty color=slategray];
-  DesignPatternSplitHelloWorldFactory -> SplitHelloWorldFactory [arrowhead=empty color=slategray];
-  JavaSplitHelloWorldFactory -> SplitHelloWorldFactory [arrowhead=empty color=slategray];
 }

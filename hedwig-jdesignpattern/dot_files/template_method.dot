@@ -2,90 +2,9 @@ digraph domain {
   edge [ fontsize = 11 ];
   node [ shape=record ];
   subgraph cluster_0 {
-    label = "io.hedwig.hellodesignpattern.behavioral.memeto";
-    Memento [ label = "{Memento | }" ] 
-    HelloWorldMementoOriginator [ label = "{HelloWorldMementoOriginator | + public HelloWorldMementoOriginator set(String)\l+ public Memento saveToMemento()\l+ public String helloWorld()\l+ public void restoreFromMemento(Memento)\l}" ] 
-  }
-  subgraph cluster_1 {
-    label = "io.hedwig.hellodesignpattern.behavioral.interpreter";
-    HelloWorldInterpreter [ label = "{HelloWorldInterpreter | + public void interpret(String)\l+ public void registerFunction(String,Function)\l}" ] 
-    PrintlnFunction [ label = "{PrintlnFunction | }" ] 
-    Function [ label = "{Function | }" ] 
-  }
-  subgraph cluster_2 {
-    label = "io.hedwig.hellodesignpattern.behavioral.command";
-    HelloWorldPrintCommand [ label = "{HelloWorldPrintCommand | + public void execute()\l+ public void setPrinter(PrintStream)\l}" ] 
-    Command [ label = "{Command | + public abstract void execute()\l}" ] 
-  }
-  subgraph cluster_3 {
-    label = "io.hedwig.hellodesignpattern.behavioral.state";
-    HelloWorldState [ label = "{HelloWorldState | + public abstract void append(HelloWorldStateContext,String)\l}" ] 
-    HelloWorldInterjectionState [ label = "{HelloWorldInterjectionState | + public void append(HelloWorldStateContext,String)\l}" ] 
-    HelloWorldStateContext [ label = "{HelloWorldStateContext | + HelloWorldStateContext append(String)\l+ public HelloWorldStateContext appendWord(String)\l+ public HelloWorldStateContext setState(HelloWorldState)\l+ public String helloWorld()\l}" ] 
-    HelloWorldObjectState [ label = "{HelloWorldObjectState | + public void append(HelloWorldStateContext,String)\l}" ] 
-    HelloWorldFinalizedState [ label = "{HelloWorldFinalizedState | + public void append(HelloWorldStateContext,String)\l}" ] 
-  }
-  subgraph cluster_4 {
-    label = "io.hedwig.hellodesignpattern.behavioral.iterator";
-    HelloWorldCharacterIterator [ label = "{HelloWorldCharacterIterator | + public Character next()\l+ public Object next()\l+ public boolean hasNext()\l+ public void remove()\l}" ] 
-  }
-  subgraph cluster_5 {
     label = "io.hedwig.hellodesignpattern.behavioral.template_method";
-    TemplateMethodHelloWorld [ label = "{TemplateMethodHelloWorld | + public String getInterjection()\l+ public String getObject()\l+ public String getSeparator()\l+ public String getTerminator()\l}" ] 
     AbstractHelloWorld [ label = "{AbstractHelloWorld | + public String helloWorld()\l+ public abstract String getInterjection()\l+ public abstract String getObject()\l+ public abstract String getSeparator()\l+ public abstract String getTerminator()\l}" ] 
+    TemplateMethodHelloWorld [ label = "{TemplateMethodHelloWorld | + public String getInterjection()\l+ public String getObject()\l+ public String getSeparator()\l+ public String getTerminator()\l}" ] 
   }
-  subgraph cluster_6 {
-    label = "io.hedwig.hellodesignpattern.behavioral.observer";
-    Subject [ label = "{Subject | + public Subject attach(Observer)\l+ public void notifyObservers()\l}" ] 
-    HelloWorldObserver [ label = "{HelloWorldObserver | + public void setPrinter(PrintStream)\l+ public void update()\l}" ] 
-    Observer [ label = "{Observer | + public abstract void update()\l}" ] 
-  }
-  subgraph cluster_7 {
-    label = "io.hedwig.hellodesignpattern.behavioral.mediator";
-    HelloWorldMediator [ label = "{HelloWorldMediator | + public String interjection()\l+ public String object()\l}" ] 
-    HelloWorldInterjection [ label = "{HelloWorldInterjection | + public String helloWorld()\l+ public String interjection()\l+ public void setHelloWorldMediator(HelloWorldMediator)\l}" ] 
-    HelloWorldObject [ label = "{HelloWorldObject | + public String helloWorld()\l+ public String object()\l+ public void setHelloWorldMediator(HelloWorldMediator)\l}" ] 
-  }
-  subgraph cluster_8 {
-    label = "io.hedwig.hellodesignpattern.behavioral.chainOfResponsibility";
-    HelloWorldObjectHandler [ label = "{HelloWorldObjectHandler | + public void handle(StringBuffer)\l}" ] 
-    HelloWorldHandler [ label = "{HelloWorldHandler | + public HelloWorldHandler setNext(HelloWorldHandler)\l+ public String helloWorld()\l+ public abstract void handle(StringBuffer)\l}" ] 
-    HelloWorldInterjectionHandler [ label = "{HelloWorldInterjectionHandler | + public void handle(StringBuffer)\l}" ] 
-  }
-  subgraph cluster_9 {
-    label = "io.hedwig.hellodesignpattern.behavioral.vistor";
-    HelloWorldCharacterVisitor [ label = "{HelloWorldCharacterVisitor | + public String helloWorld()\l+ public void visit(HelloWorldElement)\l}" ] 
-    HelloWorldElement [ label = "{HelloWorldElement | + public abstract void accept(HelloWorldVisitor)\l}" ] 
-    HelloWorldCharacterElement [ label = "{HelloWorldCharacterElement | + public char getCh()\l+ public void accept(HelloWorldVisitor)\l}" ] 
-    HelloWorldVisitor [ label = "{HelloWorldVisitor | + public abstract void visit(HelloWorldElement)\l}" ] 
-    HelloWorldCharacterElements [ label = "{HelloWorldCharacterElements | + public void accept(HelloWorldVisitor)\l}" ] 
-  }
-  subgraph cluster_10 {
-    label = "io.hedwig.hellodesignpattern.behavioral.strategy";
-    HelloWorldStrategyContext [ label = "{HelloWorldStrategyContext | + public String helloWorld()\l}" ] 
-    JavaHelloWorldStrategy [ label = "{JavaHelloWorldStrategy | + public String helloWorld()\l}" ] 
-    HelloWorldStrategy [ label = "{HelloWorldStrategy | }" ] 
-    DesignPatternHelloWorldStrategy [ label = "{DesignPatternHelloWorldStrategy | + public String helloWorld()\l}" ] 
-  }
-  HelloWorldStrategyContext -> HelloWorldStrategy [ dir=back arrowtail=odiamond color=slategray];
-  HelloWorldObject -> HelloWorldMediator [ dir=back arrowtail=odiamond color=slategray];
-  HelloWorldStateContext -> HelloWorldState [ dir=back arrowtail=odiamond color=slategray];
-  HelloWorldInterjection -> HelloWorldMediator [ dir=back arrowtail=odiamond color=slategray];
-  HelloWorldCharacterElements -> HelloWorldCharacterElement [ dir=back arrowtail=odiamond color=slategray];
-  Subject -> Observer [ dir=back arrowtail=odiamond color=slategray];
-  HelloWorldHandler -> HelloWorldHandler [ dir=back arrowtail=odiamond color=slategray];
-  HelloWorldCharacterVisitor -> HelloWorldVisitor [arrowhead=empty color=slategray];
-  HelloWorldObjectHandler -> HelloWorldHandler [arrowhead=empty color=slategray];
-  PrintlnFunction -> Function [arrowhead=empty color=slategray];
-  JavaHelloWorldStrategy -> HelloWorldStrategy [arrowhead=empty color=slategray];
-  HelloWorldObserver -> Observer [arrowhead=empty color=slategray];
-  HelloWorldCharacterElement -> HelloWorldElement [arrowhead=empty color=slategray];
-  HelloWorldInterjectionState -> HelloWorldState [arrowhead=empty color=slategray];
-  HelloWorldObjectState -> HelloWorldState [arrowhead=empty color=slategray];
-  HelloWorldFinalizedState -> HelloWorldState [arrowhead=empty color=slategray];
-  HelloWorldPrintCommand -> Command [arrowhead=empty color=slategray];
-  HelloWorldInterjectionHandler -> HelloWorldHandler [arrowhead=empty color=slategray];
   TemplateMethodHelloWorld -> AbstractHelloWorld [arrowhead=empty color=slategray];
-  HelloWorldCharacterElements -> HelloWorldElement [arrowhead=empty color=slategray];
-  DesignPatternHelloWorldStrategy -> HelloWorldStrategy [arrowhead=empty color=slategray];
 }
