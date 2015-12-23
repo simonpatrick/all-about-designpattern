@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.hedwig.dp.creational.simplefactory.ProductMaker</OriginalElement>
+  <nodes>
+    <node x="89.0" y="0.0">com.hedwig.dp.creational.simplefactory.Product</node>
+    <node x="38.0" y="-207.5">com.hedwig.dp.creational.simplefactory.ProductMaker</node>
+    <node x="0.0" y="104.0">com.hedwig.dp.creational.simplefactory.Product1</node>
+    <node x="178.0" y="104.0">com.hedwig.dp.creational.simplefactory.Product2</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.hedwig.dp.creational.simplefactory.ProductMaker" target="com.hedwig.dp.creational.simplefactory.Product1">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.simplefactory.ProductMaker" target="com.hedwig.dp.creational.simplefactory.Product">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.simplefactory.ProductMaker" target="com.hedwig.dp.creational.simplefactory.Product2">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.simplefactory.Product2" target="com.hedwig.dp.creational.simplefactory.Product">
+      <point x="0.0" y="-27.0" />
+      <point x="257.0" y="79.0" />
+      <point x="207.5" y="79.0" />
+      <point x="39.5" y="27.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.simplefactory.Product1" target="com.hedwig.dp.creational.simplefactory.Product">
+      <point x="0.0" y="-27.0" />
+      <point x="79.0" y="79.0" />
+      <point x="128.5" y="79.0" />
+      <point x="-39.5" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="64.5" y="15.5" />
+  <SelectedNodes>
+    <node>com.hedwig.dp.creational.simplefactory.ProductMaker</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

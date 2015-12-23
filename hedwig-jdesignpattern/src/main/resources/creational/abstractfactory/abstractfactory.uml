@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.hedwig.dp.creational.abstractFactory.AppClient</OriginalElement>
+  <nodes>
+    <node x="83.0" y="55.0">com.hedwig.dp.creational.abstractFactory.discreteproducts.SelfCastle</node>
+    <node x="-33.0" y="-263.0">com.hedwig.dp.creational.abstractFactory.AppClient</node>
+    <node x="-177.0" y="49.0">com.hedwig.dp.creational.abstractFactory.discreteproducts.SelfArmy</node>
+    <node x="-232.0" y="-169.0">com.hedwig.dp.creational.abstractFactory.factories.SelfKingdomFactory</node>
+    <node x="-55.0" y="-70.0">com.hedwig.dp.creational.abstractFactory.factories.KingdomFactory</node>
+    <node x="220.0" y="144.0">com.hedwig.dp.creational.abstractFactory.discreteproducts.Army</node>
+    <node x="-155.0" y="147.0">com.hedwig.dp.creational.abstractFactory.discreteproducts.Castle</node>
+    <node x="70.0" y="-162.0">com.hedwig.dp.creational.abstractFactory.factories.EmployedKingdomFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.hedwig.dp.creational.abstractFactory.factories.KingdomFactory" target="com.hedwig.dp.creational.abstractFactory.discreteproducts.SelfCastle">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.factories.KingdomFactory" target="com.hedwig.dp.creational.abstractFactory.discreteproducts.SelfArmy">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.factories.SelfKingdomFactory" target="com.hedwig.dp.creational.abstractFactory.factories.KingdomFactory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.discreteproducts.SelfArmy" target="com.hedwig.dp.creational.abstractFactory.discreteproducts.Army">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.factories.EmployedKingdomFactory" target="com.hedwig.dp.creational.abstractFactory.discreteproducts.Army">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.AppClient" target="com.hedwig.dp.creational.abstractFactory.factories.EmployedKingdomFactory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.factories.EmployedKingdomFactory" target="com.hedwig.dp.creational.abstractFactory.discreteproducts.Castle">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.AppClient" target="com.hedwig.dp.creational.abstractFactory.factories.KingdomFactory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.AppClient" target="com.hedwig.dp.creational.abstractFactory.factories.SelfKingdomFactory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.discreteproducts.SelfCastle" target="com.hedwig.dp.creational.abstractFactory.discreteproducts.Castle">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.hedwig.dp.creational.abstractFactory.factories.EmployedKingdomFactory" target="com.hedwig.dp.creational.abstractFactory.factories.KingdomFactory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="51.0" y="15.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
