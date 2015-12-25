@@ -1,6 +1,7 @@
 package io.hedwig.alg.algorithm.dsimpl;
 
-import com.hedwig.algorithm.dsimpl.interfaces.IStack;
+
+import io.hedwig.alg.algorithm.dsimpl.interfaces.IStack;
 
 import java.util.Arrays;
 

@@ -1,6 +1,7 @@
 package io.hedwig.alg.algorithm.dsimpl;
 
-import com.hedwig.algorithm.dsimpl.interfaces.ITree;
+
+import io.hedwig.alg.algorithm.dsimpl.interfaces.ITree;
 
 import java.util.Arrays;
 

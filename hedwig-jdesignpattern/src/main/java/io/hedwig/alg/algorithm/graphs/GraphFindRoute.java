@@ -12,7 +12,7 @@
 package io.hedwig.alg.algorithm.graphs;
 
 
-import com.hedwig.algorithm.datastructure.graph.GraphNode;
+import io.hedwig.alg.algorithm.datastructure.graph.GraphNode;
 
 public class GraphFindRoute {
 	

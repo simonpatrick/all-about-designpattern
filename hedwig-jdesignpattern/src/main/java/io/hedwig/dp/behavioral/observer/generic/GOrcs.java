@@ -1,7 +1,7 @@
 package io.hedwig.dp.behavioral.observer.generic;
 
 
-import com.hedwig.dp.behavioral.observer.WeatherType;
+import io.hedwig.dp.behavioral.observer.WeatherType;
 
 public class GOrcs implements Race {
     @Override

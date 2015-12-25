@@ -1,7 +1,7 @@
 package io.hedwig.dp.behavioral.observer.generic;
 
 
-import com.hedwig.dp.behavioral.observer.WeatherType;
+import io.hedwig.dp.behavioral.observer.WeatherType;
 
 public class GWeather extends Observable<GWeather, Race, WeatherType> {
 
