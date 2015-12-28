@@ -1,10 +1,10 @@
 package io.hedwig.dp.creational.abstractFactory;
 
-import com.hedwig.dp.creational.abstractFactory.discreteproducts.Army;
-import com.hedwig.dp.creational.abstractFactory.discreteproducts.Castle;
-import com.hedwig.dp.creational.abstractFactory.factories.EmployedKingdomFactory;
-import com.hedwig.dp.creational.abstractFactory.factories.KingdomFactory;
-import com.hedwig.dp.creational.abstractFactory.factories.SelfKingdomFactory;
+import io.hedwig.dp.creational.abstractFactory.discreteproducts.Army;
+import io.hedwig.dp.creational.abstractFactory.discreteproducts.Castle;
+import io.hedwig.dp.creational.abstractFactory.factories.EmployedKingdomFactory;
+import io.hedwig.dp.creational.abstractFactory.factories.KingdomFactory;
+import io.hedwig.dp.creational.abstractFactory.factories.SelfKingdomFactory;
 
 /**
  * Created by patrick on 15/4/25.
