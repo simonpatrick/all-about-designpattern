@@ -1,28 +1,32 @@
-
-data=[1,4,5,2,9,0]
+data = [1, 4, 5, 2, 9, 0]
 print(sorted(data))
 
-def buble_sort(data):
-    length=len(data)
-    for i in range(length-1):
-        for j in range(length-1):
-            if(data[j]>data[j+1]):
-                temp=data[j]
-                data[j]=data[j+1]
-                data[j+1]=temp
 
-    return data
+def bubble_sort(source):
+    length = len(source)
+    for i in range(length - 1):
+        for j in range(length - 1):
+            if source[j] > source[j + 1]:
+                temp = source[j]
+                source[j] = source[j + 1]
+                source[j + 1] = temp
 
-print(buble_sort(data))
+    return source
 
-def insert_sorting(data):
-    for i in range(1,len(data)):
-        temp=data[i]
-        j=i
-        while j>0 and data[j-1] >temp:
-            data[j]=data[j-1]
-            j-=1
-        data[j]=temp
-    return data
+
+print(bubble_sort(data))
+
+
+def insert_sorting(source):
+    for i in range(1, len(source)):
+        temp = source[i]
+        j = i
+        while j > 0 and source[j - 1] > temp:
+            source[j] = source[j - 1]
+            j -= 1
+        source[j] = temp
+    return source
+
 
 print(insert_sorting(data))
+

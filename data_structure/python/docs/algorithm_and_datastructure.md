@@ -24,6 +24,13 @@
 ## 2. 常见算法
 ### 2.1 快排
 - 快排
+- merge sort
+- heap sort
+- selection sort
+- bubble sort
+- insertion sort
+- hill sort
+- 
 
 
 
