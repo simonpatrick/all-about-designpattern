@@ -1,7 +1,6 @@
 var Singleton =
 {
-	toString : function()
-	{
+	toString: function () {
 		return "[object Singleton]";
 	}
 };
